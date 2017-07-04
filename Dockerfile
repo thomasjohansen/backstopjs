@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:6.10.0
+FROM mhart/alpine-node:6.11.0
 
 RUN apk add --no-cache \
 	bash \
@@ -54,3 +54,4 @@ RUN \
 	# BackstopJS
 	echo "Installing BackstopJS v${BACKSTOPJS_VERSION}..." && \
 	npm install -g backstopjs@${BACKSTOPJS_VERSION}
+
