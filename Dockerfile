@@ -18,7 +18,7 @@ COPY xvfb-run /usr/bin/xvfb-run
 ENV PHANTOMJS_VERSION 2.1.1
 ENV CASPERJS_VERSION 1.1.4
 ENV SLIMERJS_VERSION 0.10.3
-ENV BACKSTOPJS_VERSION 2.6.9
+ENV BACKSTOPJS_VERSION 2.6.13
 
 # Installing dependencies from archives - not only this allows us to control versions, 
 # but the resulting image size is 130MB+ less (!) compared to an npm install (440MB vs 575MB).
@@ -54,7 +54,3 @@ RUN \
 	# BackstopJS
 	echo "Installing BackstopJS v${BACKSTOPJS_VERSION}..." && \
 	npm install -g backstopjs@${BACKSTOPJS_VERSION}
-
-WORKDIR /src
-
-ENTRYPOINT ["sh"]
